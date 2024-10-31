@@ -6,10 +6,6 @@
 using namespace std;
 using namespace nlohmann;
 
-// test json data:  https://jsonplaceholder.typicode.com/users
-// video: https://www.youtube.com/watch?v=NuWQp_uAvwo
-
-
 struct Person {
 	std::string name;
 	int born;
