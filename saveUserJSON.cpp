@@ -28,8 +28,8 @@ int main() {
 	Cast.push_back("KJ Dowd");
 
 
-	vector<RelatedMovie> RelatedMovies{
-		{"Rogue One", 2016}, {"Dune", 2021} };
+	vector<RelatedMovie> RelatedMovies{ {"Rogue One", 2016}, {"Dune", 2021} };
+	RelatedMovies.push_back({ "Blade Runner", 1996 });
 
 	json UserDataAsJSON{
 		{"movie", "Star Wars"},
