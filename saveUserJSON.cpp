@@ -1,6 +1,7 @@
 
 #include <iostream>
 #include <fstream>
+#include <random>
 #include "nlohmann/json.hpp"
 
 using namespace std;
@@ -46,14 +47,16 @@ int main() {
 
 	// make random file name
 	string fileName = "user_";
-	srand(time(NULL));
-	fileName.append(to_string(rand())).append(".txt");
+
+	// stronger random
+	random_device strongerRand;
+	string numToStringRandom = to_string(strongerRand());
+	fileName.append(numToStringRandom).append(".txt");
 
 	myfile.open(fileName);
 	myfile << UserDataAsJSON;
 	myfile.close();
 
-	system("pause");
 	return 0;
 }
 
