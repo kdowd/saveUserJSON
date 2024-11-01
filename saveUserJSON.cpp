@@ -6,8 +6,7 @@
 using namespace std;
 using namespace nlohmann;
 
-// test json data:  https://jsonplaceholder.typicode.com/users
-// video: https://www.youtube.com/watch?v=NuWQp_uAvwo
+string getMessage();
 
 
 struct Person {
@@ -37,19 +36,35 @@ int main() {
 		{"year", 1977},
 		{"cast", Cast},
 		{"director", Director},
-		{"related_movies", RelatedMovies}
+		{"related_movies", RelatedMovies},
+		{"message", getMessage()}
 	};
 
 	//std::cout << UserDataAsJSON.dump(4);
 
 	ofstream myfile;
-	myfile.open("example.txt");
+
+	// make random file name
+	string fileName = "user_";
+	srand(time(NULL));
+	fileName.append(to_string(rand())).append(".txt");
+
+	myfile.open(fileName);
 	myfile << UserDataAsJSON;
 	myfile.close();
 
 	system("pause");
 	return 0;
 }
+
+
+string getMessage() {
+	return "Hello World";
+}
+
+
+
+
 
 
 
