@@ -43,18 +43,17 @@ int main() {
 
 	//std::cout << UserDataAsJSON.dump(4);
 
-	ofstream myfile;
-
-	// make random file name
 
 
-	// stronger random
+	// stronger random num
 	random_device strongerRand;
 	string numToStringRandom = to_string(strongerRand());
 
+	// create file name
 	string fileName = "user_";
 	fileName.append(numToStringRandom).append(".txt");
 
+	ofstream myfile;
 	myfile.open(fileName);
 	myfile << UserDataAsJSON;
 	myfile.close();
