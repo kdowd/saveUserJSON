@@ -31,7 +31,7 @@ int main() {
 	vector<RelatedMovie> RelatedMovies{ {"Rogue One", 2016}, {"Dune", 2021} };
 	RelatedMovies.push_back({ "Blade Runner", 1996 });
 
-	json UserDataAsJSON{
+	nlohmann::json UserDataAsJSON{
 		{"movie", "Star Wars"},
 		{"released", true},
 		{"year", 1977},
@@ -58,12 +58,18 @@ int main() {
 	myfile << UserDataAsJSON;
 	myfile.close();
 
+	cout << "File saved" << endl;
+
+
 	return 0;
 }
 
 
 string getMessage() {
-	return "Hello World";
+	cout << "Please type a message" << endl;
+	string mess;
+	cin >> mess;
+	return mess;
 }
 
 
