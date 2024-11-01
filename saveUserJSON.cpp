@@ -46,11 +46,13 @@ int main() {
 	ofstream myfile;
 
 	// make random file name
-	string fileName = "user_";
+
 
 	// stronger random
 	random_device strongerRand;
 	string numToStringRandom = to_string(strongerRand());
+
+	string fileName = "user_";
 	fileName.append(numToStringRandom).append(".txt");
 
 	myfile.open(fileName);
