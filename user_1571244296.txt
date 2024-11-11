@@ -1,1 +1,0 @@
-{"cast":["Mark Hamill","Harrison Ford","Carrie Fisher","KJ Dowd"],"director":{"born":1944,"name":"George Lucas"},"message":"Hello World","movie":"Star Wars","related_movies":[{"name":"Rogue One","year":2016},{"name":"Dune","year":2021},{"name":"Blade Runner","year":1996}],"released":true,"year":1977}
