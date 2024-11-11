@@ -55,12 +55,14 @@ int main() {
 	string fileName = "user_";
 	fileName.append(numToStringRandom).append(".txt");
 
+
 	ofstream myfile;
 	myfile.open(fileName);
 	myfile << UserDataAsJSON.dump(4);
 	myfile.close();
 
 	cout << "File saved" << endl;
+
 
 
 	return 0;
